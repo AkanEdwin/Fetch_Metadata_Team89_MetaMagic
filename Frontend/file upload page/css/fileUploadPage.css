@@ -1,3 +1,50 @@
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?s5n2ad');
+  src:  url('../fonts/icomoon.eot?s5n2ad#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?s5n2ad') format('truetype'),
+    url('../fonts/icomoon.woff?s5n2ad') format('woff'),
+    url('../fonts/icomoon.svg?s5n2ad#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-dashboard:before {
+  content: "\e900";
+}
+.icon-library:before {
+  content: "\e901";
+}
+.icon-log-out:before {
+  content: "\e902";
+}
+.icon-phone:before {
+  content: "\e903";
+}
+.icon-upload:before {
+  content: "\e904";
+}
+.icon-userusers:before {
+  content: "\e905";
+}
+
+
 *{
 	margin: 0;
 	padding: 0;
@@ -103,17 +150,12 @@ a{
 
 .user:hover{
   background: #C8E1E1;
-
 }
 
-.user::after{
-  background: #114993;
+
+.user:active {
+  background-color: #196DDC;
   color: #FFFFFF;
-}
-
-.user:focus{
-  background: #114993;
-
 }
 
 
@@ -188,13 +230,10 @@ a{
   max-width: 584px;
 }
 
-.box--over{
-  border: solid;
+#box.actives{
+  border: dashed 2px #2A2A2A;
 }
 
-.drop-zone__input{
-  display: none;
-}
 .box-content{
   display: flex;
   flex-direction: column;

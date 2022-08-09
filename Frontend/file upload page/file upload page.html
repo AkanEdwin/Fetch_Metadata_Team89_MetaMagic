@@ -8,7 +8,6 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/fileUploadPage.css">
-	<script src="js/file-upload-page.js" defer></script>
 	
 </head>
 <body>
@@ -26,7 +25,7 @@
 				<p>Metadata Analyst</p>
 			</div>
 			</div>
-			<a href="#"><div  class="user"><img src="Img/user.png">Profile</div></a>
+			<a href="#" class="user-link"><div  class="user"><img src="Img/user.png">Profile</div></a>
 			<a href="#"><div class="user"><img src="Img/report-columns.png">Dashboard</div></a>
 			<a href="#"><div class="user"><img src="Img/upload.png">Upload & Extract</div></a>
 			<a href="#"><div class="user"><img src="Img/bookmark-empty-1.png">Metadata Library</div></a>
@@ -38,11 +37,11 @@
 				<h3><span class="left-arrow"><a href="#"><img src="img/arrow-left.svg" alt="leftArrow" class="lrft"></a></span>Upload & Extract</h3>
 				<p>Extract <span class="orange">metadata</span> of your files, ranging from date of creation, file size, edit history and other "hidden information."</p>
 			</div>
-			<div id="box">
+			<div id="box" class="drag-active">
 			  <div class="box-content">
 					<div class="drag"><img src="Img/cloud-upload.svg" class="upload-icon">
-						<h3 id="upload-text">Drag and drop a file here or click to upload</h3>
-						<input type="file" name="myFile" class="drop-zone__input">
+						<h3 id="upload-text"><span class="dragtext">Drag and drop a file here</span> or click to upload</h3>
+						<input type="file" name="myFile" class="drop_input" hidden>
 				  </div>
 				  <div class="maxFile"><p>Max file size is 50mb. Your uploads are private and secure.</p>
 				  </div>
@@ -85,5 +84,6 @@
 		</div>
 
 	</main>
+	<script src="js/file-upload-page.js"></script>
 </body>
 </html>
